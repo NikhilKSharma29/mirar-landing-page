@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import Btn from "./Btn";
+import Btn from "./btn";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
