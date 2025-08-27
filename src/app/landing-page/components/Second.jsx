@@ -20,18 +20,18 @@ const Second = () => {
           
           {/* Content Section - On right for desktop, top for mobile */}
           <div className='w-full lg:w-1/2 space-y-6 sm:space-y-8 text-center lg:text-center order-1 lg:order-2'>
-            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-4xl leading-snug'>
+            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-4xl leading-snug text-black'>
               Food delivery platforms are taking your hard-earned revenue.
             </h1>
             
-            <div className='space-y-3 sm:space-y-4 text-base sm:text-lg md:text-xl lg:text-xl text-gray-700'>
+            <div className='space-y-3 sm:space-y-4 text-base sm:text-lg md:text-xl lg:text-xl text-black'>
               <p><TbMoneybag className='inline mr-2 text-3xl text-[#367FEA] md:text-2xl lg:text-3xl sm:text-2xl'/> Commissions that crush margins</p>
               <p><CgNotes className='inline mr-2 text-3xl text-[#367FEA] md:text-2xl lg:text-3xl sm:text-2xl'/> No access to your own customer data</p>
               <p><BsGraphUpArrow className='inline mr-2 text-3xl text-[#367FEA] md:text-2xl lg:text-3xl sm:text-2xl'/> Forced to raise prices just to survive</p>
               <p><LuSearchSlash className='inline mr-2 text-3xl text-[#367FEA] md:text-2xl lg:text-3xl sm:text-2xl'/> Your brand hidden behind their app</p>
             </div>
             
-            <p className='text-lg sm:text-xl md:text-2xl lg:text-xl text-gray-800'>
+            <p className='text-lg sm:text-xl md:text-2xl lg:text-xl text-black'>
               Do you want to retain all your order value?
             </p>
             

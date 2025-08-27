@@ -42,7 +42,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-white'}`}>
+    <header className={`w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-white'}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -50,7 +50,7 @@ export default function Navbar() {
             <img
               src="/images/Company Logo.png"
               alt="Company Logo"
-              className="h-5 w-auto md:h-7"
+              className="h-5 w-auto md:h-5 lg:h-5 h-2"
               style={{ maxHeight: '28px' }}
             />
           </a>

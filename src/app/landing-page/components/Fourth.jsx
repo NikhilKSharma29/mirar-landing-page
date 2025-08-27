@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight, Bell, Share, User } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
+import Btn from './btn';
 
 const steps = [
   {
@@ -51,10 +52,10 @@ const Fourth = () => {
   return (
     <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 text-center">
       {/* Title */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-black">
         Getting Started With Mirar AI
       </h2>
-      <p className="text-gray-600 max-w-2xl mx-auto mb-12 md:mb-16">
+      <p className="text-gray-600 max-w-2xl mx-auto mb-12 md:mb-16 text-black">
         No coding. No complicated setup. Mirar AI is built so any restaurant can
         start taking AI-powered orders the same day.
       </p>
@@ -91,7 +92,7 @@ const Fourth = () => {
                       {step.icon}
                     </div>
                     <h3 className="mt-6 font-bold text-lg md:text-xl">{step.title}</h3>
-                    <p className="mt-2 text-gray-600 text-sm md:text-base max-w-xs mx-auto">
+                    <p className="mt-2 text-gray-600 text-sm md:text-base max-w-xs mx-auto text-black">
                       {step.description}
                     </p>
                   </div>
@@ -129,12 +130,7 @@ const Fourth = () => {
 
       {/* CTA */}
       <div className="mt-12 md:mt-16">
-        <a
-          href="#"
-          className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-medium shadow hover:scale-105 transition"
-        >
-          Start Free Trial Now
-        </a>
+        <Btn />
       </div>
     </section>
   )

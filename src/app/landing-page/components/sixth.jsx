@@ -9,7 +9,7 @@ const sixth = () => {
     return (
         <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 text-center bg-white">
             {/* Title */}
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
                 Pays for Itself After a Few Orders
             </h2>
 
@@ -44,17 +44,17 @@ const sixth = () => {
                 {/* Starter Plan */}
                 <div className="bg-[#F2F2F2] rounded-3xl shadow-md hover:shadow-lg transition-shadow duration-300 p-8 flex flex-col h-full">
                     <div className="mb-6">
-                        <h3 className="text-xl font-semibold mb-3">Starter Plan</h3>
-                        <p className="text-4xl font-bold mb-2">
+                        <h3 className="text-xl font-semibold mb-3 text-black">Starter Plan</h3>
+                        <p className="text-4xl font-bold mb-2 text-black">
                             ${billingCycle === "yearly" ? "300" : "30"}
-                            <span className="text-xl">/{billingCycle === "yearly" ? "yr" : "mo"}</span>
+                            <span className="text-xl text-black">/{billingCycle === "yearly" ? "yr" : "mo"}</span>
                         </p>
                         {billingCycle === "yearly" && (
                             <p className="text-green-600 text-sm mb-4">Save 17% annually</p>
                         )}
                     </div>
                     <hr className="w-full border-gray-300 my-2" />
-                    <ul className="text-gray-700 text-sm space-y-3 text-left my-6 flex-grow">
+                    <ul className="text-gray-700 text-sm space-y-3 text-left my-6 flex-grow text-black">
                         <li className="flex items-start">
                             <span className="text-green-500 mr-2 mt-0.5">✔</span>
                             <span>1 social channel</span>
@@ -76,17 +76,17 @@ const sixth = () => {
                 {/* Growth Plan */}
                 <div className="bg-[#F2F2F2] rounded-3xl shadow-md hover:shadow-lg transition-shadow duration-300 p-8 flex flex-col h-full">
                     <div className="mb-6">
-                        <h3 className="text-xl font-semibold mb-3">Growth Plan</h3>
-                        <p className="text-4xl font-bold mb-2">
+                        <h3 className="text-xl font-semibold mb-3 text-black">Growth Plan</h3>
+                        <p className="text-4xl font-bold mb-2 text-black">
                             ${billingCycle === "yearly" ? "500" : "50"}
-                            <span className="text-xl">/{billingCycle === "yearly" ? "yr" : "mo"}</span>
+                            <span className="text-xl text-black">/{billingCycle === "yearly" ? "yr" : "mo"}</span>
                         </p>
                         {billingCycle === "yearly" && (
                             <p className="text-green-600 text-sm mb-4">Save 17% annually</p>
                         )}
                     </div>
                     <hr className="w-full border-gray-300 my-2" />
-                    <ul className="text-gray-700 text-sm space-y-3 text-left my-6 flex-grow">
+                    <ul className="text-gray-700 text-sm space-y-3 text-left my-6 flex-grow text-black">
                         <li className="flex items-start">
                             <span className="text-green-500 mr-2 mt-0.5">✔</span>
                             <span>All socials (WhatsApp, Messenger, Instagram)</span>
@@ -112,17 +112,17 @@ const sixth = () => {
                 {/* Pro Plan */}
                 <div className="bg-[#F2F2F2] rounded-3xl shadow-md hover:shadow-lg transition-shadow duration-300 p-8 flex flex-col h-full">
                     <div className="mb-6">
-                        <h3 className="text-xl font-semibold mb-3">Pro Plan</h3>
-                        <p className="text-4xl font-bold mb-2">
+                        <h3 className="text-xl font-semibold mb-3 text-black">Pro Plan</h3>
+                        <p className="text-4xl font-bold mb-2 text-black">
                             ${billingCycle === "yearly" ? "950" : "99"}
-                            <span className="text-xl">/{billingCycle === "yearly" ? "yr" : "mo"}</span>
+                            <span className="text-xl text-black">/{billingCycle === "yearly" ? "yr" : "mo"}</span>
                         </p>
                         {billingCycle === "yearly" && (
                             <p className="text-green-600 text-sm mb-4">Save 20% annually</p>
                         )}
                     </div>
                     <hr className="w-full border-gray-300 my-2" />
-                    <ul className="text-gray-700 text-sm space-y-3 text-left my-6 flex-grow">
+                    <ul className="text-gray-700 text-sm space-y-3 text-left my-6 flex-grow text-black">
                         <li className="flex items-start">
                             <span className="text-green-500 mr-2 mt-0.5">✔</span>
                             <span>All features included</span>
