@@ -50,7 +50,7 @@ const Fourth = () => {
   };
 
   return (
-    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 text-center bg-white">
       {/* Title */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-black">
         Getting Started With Mirar AI
