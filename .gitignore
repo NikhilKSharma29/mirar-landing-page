@@ -39,3 +39,26 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Docker
+Dockerfile
+Dockerfile.*
+.dockerignore
+**/Dockerfile
+**/Dockerfile.*
+**/.dockerignore
+
+# Docker Compose
+docker-compose.yml
+docker-compose.*.yml
+**/docker-compose.yml
+**/docker-compose.*.yml
+
+# Docker volumes
+**/docker-volumes/
+
+# Local development environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

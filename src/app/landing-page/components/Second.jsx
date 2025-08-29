@@ -1,9 +1,12 @@
-import React from 'react'
+
+"use client"
+import React, { useState } from 'react'
 import Btn from './btn'
 import {TbMoneybag} from 'react-icons/tb'
 import {CgNotes} from 'react-icons/cg'
 import {LuSearchSlash} from 'react-icons/lu'
 import {BsGraphUpArrow} from 'react-icons/bs'
+import Image from 'next/image';
 const Second = () => {
   return (
     <div className='bg-white py-12 md:py-20 px-6 sm:px-8 md:px-12 lg:px-24 xl:px-32'>
@@ -11,10 +14,12 @@ const Second = () => {
         <div className='mt-10 flex flex-col lg:flex-row items-center justify-center gap-10 md:gap-16'>
           {/* Image Section - On left for desktop, bottom for mobile */}
           <div className='w-full lg:w-1/2 flex justify-center order-2 lg:order-1'>
-            <img 
+            <Image 
               className='w-full max-w-lg h-auto rounded-2xl md:rounded-3xl shadow-lg object-cover'
               src="/images/receipt.png" 
               alt="Receipt showing order details" 
+              width={1920}
+              height={1080}
             />
           </div>
           
@@ -41,6 +46,7 @@ const Second = () => {
           </div>
         </div>
       </div>
+      
     </div>
   )
 }

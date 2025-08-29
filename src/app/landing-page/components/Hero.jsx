@@ -1,21 +1,29 @@
 import React from 'react';
 import Btn from './btn';
+import ModalForm from './ModalForm';
+import Image from 'next/image';
+import { useModal } from './ModalContext';
 
 const Hero = () => {
-  return (
+   const { openModal } = useModal();
+    return (
     <section className="relative w-full h-[120vh] flex items-center justify-center overflow-hidden">
       {/* Background Images */}
       <div className="absolute inset-0 w-full h-full">
         {/* Desktop Background */}
-        <img 
+        <Image
           src="/images/header.gif" 
+          width={1920}
+          height={1080}
           alt="Restaurant dining scene" 
           className="hidden md:block w-full h-full object-cover object-center"
           loading="eager"
         />
         {/* Mobile Background */}
-        <img
+        <Image
           src="/images/mobscreen.gif"
+          width={1920}
+          height={1080}
           alt="Restaurant dining scene"
           className="md:hidden w-full h-full object-cover object-center"
           loading="eager"
@@ -38,7 +46,8 @@ const Hero = () => {
                 Mirar AI turns WhatsApp, Messenger & Instagram into your full-time ordering team taking orders, payments, delivery, onsite and kerbside pickup, and customer reviews automatically.
               </p>
               <div className="mt-6 sm:mt-8 flex justify-center lg:justify-center">
-                <Btn className="px-8 py-3 text-sm sm:text-base" />
+                   <Btn onClick={openModal} className="px-8 py-3 text-sm sm:text-base" />
+                   <ModalForm/>
               </div>
             </div>
           </div>
