@@ -2,6 +2,8 @@ import React from 'react'
 import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { useModal } from './ModalContext';
 import Image from 'next/image';
+import Link from 'next/link';
+
 const Footer = () => {
    const { openModal } = useModal();
   return (
@@ -41,7 +43,7 @@ const Footer = () => {
           <p className="text-center md:text-right"> 2025 Mirar AI. All rights reserved.</p>
           {/* Policy Links - Column on mobile, row on desktop */}
           <div className="flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-6 ">
-            <a href="#" className="hover:text-white transition-colors block underline">Privacy Policy</a>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors block underline">Privacy Policy</Link>
             <a href="#" className="hover:text-white transition-colors block underline">Terms of Use</a>
             <a href="#" className="hover:text-white transition-colors block underline">Cookie Policy</a>
           </div>
