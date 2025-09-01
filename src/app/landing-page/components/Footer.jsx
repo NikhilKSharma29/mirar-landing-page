@@ -19,10 +19,10 @@ const Footer = () => {
 
           {/* Navigation Links - Stacked on mobile */}
           <nav className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium">
-            <a onClick={openModal} className="block hover:text-white">Contact Us</a>
-            <a href="#" className="block hover:text-white">About Us</a>
-            <a  className="block hover:text-white">Help Center</a>
-            <a onClick={openModal}  className="block hover:text-white">Get Started</a>
+            <a onClick={openModal} className="block hover:text-white cursor-pointer">Contact Us</a>
+            <a href="#" className="block hover:text-white cursor-pointer">About Us</a>
+            <a  className="block hover:text-white cursor-pointer">Help Center</a>
+            <a onClick={openModal}  className="block hover:text-white cursor-pointer">Get Started</a>
           </nav>
 
           {/* Social Icons */}
@@ -43,9 +43,9 @@ const Footer = () => {
           <p className="text-center md:text-right"> 2025 Mirar AI. All rights reserved.</p>
           {/* Policy Links - Column on mobile, row on desktop */}
           <div className="flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-6 ">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors block underline">Privacy Policy</Link>
-            <a href="#" className="hover:text-white transition-colors block underline">Terms of Use</a>
-            <a href="#" className="hover:text-white transition-colors block underline">Cookie Policy</a>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors block underline cursor-pointer">Privacy Policy</Link>
+            <a href="#" className="hover:text-white transition-colors block underline cursor-pointer">Terms of Use</a>
+            <a href="#" className="hover:text-white transition-colors block underline cursor-pointer">Cookie Policy</a>
           </div>
           
           {/* Copyright - Always at bottom on mobile, right on desktop */}
