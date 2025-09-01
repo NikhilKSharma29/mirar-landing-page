@@ -64,7 +64,7 @@ const Third = () => {
   };
 
   return (
-    <div className='bg-gradient-to-br from-[#C3F19D] to-[#7DC243] w-full py-12 md:py-20 px-4 sm:px-6 lg:px-8 xl:px-16'>
+    <div id='benefits' className='bg-gradient-to-br from-[#C3F19D] to-[#7DC243] w-full py-12 md:py-20 px-4 sm:px-6 lg:px-8 xl:px-16'>
       <div className='max-w-7xl mx-auto'>
         {/* Heading Section */}
         <div className='text-center space-y-4 md:space-y-6 mb-12 md:mb-20'>

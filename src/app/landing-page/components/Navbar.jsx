@@ -22,7 +22,7 @@ export default function Navbar() {
   }, [scrolled]);
 
   const links = [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "#hero" },
     { label: "Solution", href: "#solution" },
     { label: "Benefits", href: "#benefits" },
     { label: "Pricing", href: "#pricing" },

@@ -7,7 +7,7 @@ import { useModal } from './ModalContext';
 const Hero = () => {
    const { openModal } = useModal();
     return (
-    <section className="relative w-full h-[120vh] flex items-center justify-center overflow-hidden">
+    <section id='hero' className="relative w-full h-[120vh] flex items-center justify-center overflow-hidden">
       {/* Background Images */}
       <div className="absolute inset-0 w-full h-full">
         {/* Desktop Background */}
