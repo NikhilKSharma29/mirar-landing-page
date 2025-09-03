@@ -16,6 +16,7 @@ const ModalForm = () => {
   // Lock body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
+      setStatus("");
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
@@ -28,7 +29,7 @@ const ModalForm = () => {
     setErrors({ ...errors, [e.target.name]: "" }); // clear error when typing
   };
 
-  // ✨ Validation logic
+  // Validation logic
   const validate = () => {
     let newErrors = {};
 
@@ -51,7 +52,7 @@ const ModalForm = () => {
     }
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // ✅ no errors
+    return Object.keys(newErrors).length === 0; // no errors
   };
 
   const handleSubmit = async (e) => {
@@ -74,14 +75,14 @@ const ModalForm = () => {
 
       if (res.ok) {
         console.log("mail data", data);
-        setStatus("✅ Subscribed successfully!");
+        setStatus("Subscribed successfully!");
         setFormData({ name: "", email: "", phone: "" });
-        closeModal();
+       
       } else {
-        setStatus(`❌ Error: ${data.error}`);
+        setStatus(`Error: ${data.error}`);
       }
     } catch (err) {
-      setStatus("❌ Something went wrong.");
+      setStatus("Something went wrong.");
       console.error(err);
     }
   };

@@ -37,11 +37,11 @@ export async function POST(req) {
       const data = await response.json();
   
       if (!response.ok) {
-        let friendlyError = "Something went wrong. Please try again.";
-
-        if (data.title === "Member Exists") {
+        let friendlyError = "This email is already registered.";
+        const errorTitle = (data.title || "").toLowerCase();
+        if (errorTitle === "member exists") {
           friendlyError = "This email is already registered.";
-        } else if (data.title === "Invalid Resource") {
+        } else if (errorTitle === "invalid resource") {
           friendlyError = "Please enter a valid email address.";
         }
         return new Response(JSON.stringify({ error: friendlyError }), {
