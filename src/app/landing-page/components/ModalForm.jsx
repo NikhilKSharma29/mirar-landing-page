@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { useModal } from "./ModalContext";
 import { createPortal } from "react-dom";
+import { parsePhoneNumber, isValidPhoneNumber } from 'libphonenumber-js';
+
 
 const ModalForm = () => {
   const { isOpen, closeModal } = useModal();
@@ -29,6 +31,52 @@ const ModalForm = () => {
     setErrors({ ...errors, [e.target.name]: "" }); // clear error when typing
   };
 
+  // Global Phone Validation Function using libphonenumber-js
+  const validatePhone = (phone, defaultCountry = 'IN') => {
+    // Check if phone is empty
+    if (!phone || !phone.trim()) {
+      return {
+        isValid: false,
+        error: "Contact number is required."
+      };
+    }
+
+    try {
+      // Parse the phone number with default country
+      const phoneNumber = parsePhoneNumber(phone, defaultCountry);
+      
+      // Check if parsing was successful
+      if (!phoneNumber) {
+        return {
+          isValid: false,
+          error: "Invalid phone number format."
+        };
+      }
+      
+      // Validate the phone number
+      if (!phoneNumber.isValid()) {
+        return {
+          isValid: false,
+          error: `Please enter a valid phone number.`
+        };
+      }
+      
+      // Return success with formatted number
+      return {
+        isValid: true,
+        error: null,
+        formatted: phoneNumber.formatInternational(),
+        e164: phoneNumber.number
+      };
+      
+    } catch (error) {
+      return {
+        isValid: false,
+        error: "Invalid phone number format."
+      };
+    }
+  };
+
   // Validation logic
   const validate = () => {
     let newErrors = {};
@@ -45,10 +93,10 @@ const ModalForm = () => {
       newErrors.email = "Enter a valid email address.";
     }
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Contact number is required.";
-    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
-      newErrors.phone = "Contact must be a valid 10-digit number.";
+    // Global phone validation using libphonenumber-js
+    const phoneValidation = validatePhone(formData.phone, 'IN'); // Change 'IN' to your target country
+    if (!phoneValidation.isValid) {
+      newErrors.phone = phoneValidation.error;
     }
 
     setErrors(newErrors);
@@ -104,7 +152,7 @@ const ModalForm = () => {
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold text-gray-800">Get in Touch</h2>
           <p className="text-gray-500 mt-1 text-sm">
-            Fill in your details and we’ll reach out to you.
+            Fill in your details and we'll reach out to you.
           </p>
         </div>
 
