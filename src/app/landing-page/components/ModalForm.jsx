@@ -31,8 +31,8 @@ const ModalForm = () => {
     setErrors({ ...errors, [e.target.name]: "" }); // clear error when typing
   };
 
-  // Global Phone Validation Function using libphonenumber-js
-  const validatePhone = (phone, defaultCountry = 'IN') => {
+  // Global Phone Validation Function - Accepts numbers from ANY country
+  const validatePhone = (phone) => {
     // Check if phone is empty
     if (!phone || !phone.trim()) {
       return {
@@ -41,38 +41,96 @@ const ModalForm = () => {
       };
     }
 
-    try {
-      // Parse the phone number with default country
-      const phoneNumber = parsePhoneNumber(phone, defaultCountry);
-      
-      // Check if parsing was successful
-      if (!phoneNumber) {
-        return {
-          isValid: false,
-          error: "Invalid phone number format."
-        };
-      }
-      
-      // Validate the phone number
-      if (!phoneNumber.isValid()) {
-        return {
-          isValid: false,
-          error: `Please enter a valid phone number.`
-        };
-      }
-      
-      // Return success with formatted number
+    const cleanPhone = phone.replace(/\D/g, '');
+    
+    // Check minimum length (international standard)
+    if (cleanPhone.length < 7) {
       return {
-        isValid: true,
-        error: null,
-        formatted: phoneNumber.formatInternational(),
-        e164: phoneNumber.number
+        isValid: false,
+        error: "Phone number is too short (minimum 7 digits)."
+      };
+    }
+    
+    // Check maximum length (international standard)
+    if (cleanPhone.length > 15) {
+      return {
+        isValid: false,
+        error: "Phone number is too long (maximum 15 digits)."
+      };
+    }
+
+    // Check if phone contains valid characters only
+    if (!/^[\d\s\-\(\)\+]+$/.test(phone)) {
+      return {
+        isValid: false,
+        error: "Phone number contains invalid characters."
+      };
+    }
+
+    try {
+      // Try to parse without country code - works for international format
+      let phoneNumber;
+      
+      // If phone starts with +, parse it directly
+      if (phone.trim().startsWith('+')) {
+        phoneNumber = parsePhoneNumber(phone);
+      } else {
+        // Try parsing with common country codes to validate
+        const commonCountries = ['US', 'IN', 'UK', 'CA', 'AU', 'DE', 'FR', 'JP', 'CN', 'BR', 'MX', 'IT', 'ES', 'NL', 'SE', 'NO'];
+        
+        for (const country of commonCountries) {
+          try {
+            const parsed = parsePhoneNumber(phone, country);
+            if (parsed && parsed.isValid()) {
+              phoneNumber = parsed;
+              break;
+            }
+          } catch (e) {
+            continue;
+          }
+        }
+      }
+      
+      // If we found a valid phone number
+      if (phoneNumber && phoneNumber.isValid()) {
+        return {
+          isValid: true,
+          error: null,
+          formatted: phoneNumber.formatInternational(),
+          e164: phoneNumber.number
+        };
+      }
+      
+      // If no valid format found but length is okay, accept it
+      // This allows numbers from countries not in our common list
+      if (cleanPhone.length >= 7 && cleanPhone.length <= 15) {
+        return {
+          isValid: true,
+          error: null,
+          formatted: phone,
+          e164: cleanPhone
+        };
+      }
+      
+      return {
+        isValid: false,
+        error: "Please enter a valid phone number."
       };
       
     } catch (error) {
+      // If parsing fails but length is valid, accept it
+      if (cleanPhone.length >= 7 && cleanPhone.length <= 15) {
+        return {
+          isValid: true,
+          error: null,
+          formatted: phone,
+          e164: cleanPhone
+        };
+      }
+      
       return {
         isValid: false,
-        error: "Invalid phone number format."
+        error: "Please enter a valid phone number."
       };
     }
   };
@@ -93,8 +151,8 @@ const ModalForm = () => {
       newErrors.email = "Enter a valid email address.";
     }
 
-    // Global phone validation using libphonenumber-js
-    const phoneValidation = validatePhone(formData.phone, 'IN'); // Change 'IN' to your target country
+    // Global phone validation - accepts numbers from ANY country
+    const phoneValidation = validatePhone(formData.phone);
     if (!phoneValidation.isValid) {
       newErrors.phone = phoneValidation.error;
     }
