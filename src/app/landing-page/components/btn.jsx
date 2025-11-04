@@ -1,10 +1,15 @@
 import React from 'react'
-import { useModal } from './ModalContext';
+// import { useModal } from './ModalContext';
 
 const Btn = () => {
-  const { openModal } = useModal();
+  // const { openModal } = useModal();
+  
+
+  const handleClick = () => {
+  window.open("https://restaurant.mirar.ai", "_blank", "noopener=yes,noreferrer=yes");
+};
   return (
-    <button  onClick={openModal} className="
+    <button  onClick={handleClick}  className="
     bg-gradient-to-r from-[#367fea] to-[#74E5E6] 
     text-white font-medium
     px-4 py-2 text-sm
