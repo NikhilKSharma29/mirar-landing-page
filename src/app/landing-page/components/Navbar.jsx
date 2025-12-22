@@ -25,7 +25,7 @@ export default function Navbar() {
     { label: "Home", href: "#hero" },
     { label: "Solution", href: "#solution" },
     { label: "Benefits", href: "#benefits" },
-    { label: "Pricing", href: "#pricing" },
+    // { label: "Pricing", href: "#pricing" },
   ];
 
   // Close mobile menu when clicking outside

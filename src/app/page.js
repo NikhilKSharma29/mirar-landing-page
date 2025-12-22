@@ -32,7 +32,7 @@ const page = () => {
             <Fifth />
 
             { /* sixth section */}
-            <Sixth />
+            {/* <Sixth /> */}
 
             {/* seventh section */}
             <Seventh />
