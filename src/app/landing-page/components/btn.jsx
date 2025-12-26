@@ -14,12 +14,14 @@ const Btn = () => {
     text-white font-medium
     px-4 py-2 text-sm
     sm:px-5 sm:py-2.5 sm:text-base
-    md:px-6 md:py-3 md:text-lg
+    md:px-6 md:py-3 md:text-md
     rounded-full shadow-md
     hover:opacity-90 transition
     cursor-pointer
   ">
-    Start Free Trial Now
+    Start Taking Orders from Social
+Media Now
+
   </button>
   )
 }

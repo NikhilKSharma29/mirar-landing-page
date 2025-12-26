@@ -52,7 +52,7 @@ const Third = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === contentSections.length - 1 ? 0 : prevIndex + 1
     );
   };
@@ -69,10 +69,17 @@ const Third = () => {
         {/* Heading Section */}
         <div className='text-center space-y-4 md:space-y-6 mb-12 md:mb-20'>
           <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium px-2 sm:px-4 md:px-8 lg:px-16 xl:px-24 text-black'>
-            Turn WhatsApp, Messenger & Instagram Into Your Own Food Delivery Platform.
+            Meet Your Customers
+            Where They Already
+            Are.
           </h1>
           <p className='text-base sm:text-lg md:text-xl text-black px-2 sm:px-4 md:px-12 lg:px-24 xl:px-32'>
-            Stop losing money to platforms. With Mirar AI, WhatsApp, Messenger & Instagram become your direct ordering system, keeping 100% of your profit, your customer data, and your brand front and center.
+            Billions of people use WhatsApp,
+            Messenger and Instagram every
+            month. Mirar lets you turn those
+            conversations into direct,
+            commission-free orders that flow
+            straight to your POS.
           </p>
         </div>
 
@@ -96,12 +103,12 @@ const Third = () => {
           </button>
 
           {/* Slides Container */}
-          <div 
+          <div
             className='flex transition-transform duration-300 ease-in-out'
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {contentSections.map((section) => (
-              <div 
+              <div
                 key={section.id}
                 className='w-full flex-shrink-0 px-4'
               >
@@ -118,8 +125,8 @@ const Third = () => {
                     </p>
                   </div>
                   <div className='w-full md:w-1/2 flex justify-center'>
-                    <Image   
-                      src={section.image} 
+                    <Image
+                      src={section.image}
                       alt={section.title}
                       width={1920}
                       height={1080}
