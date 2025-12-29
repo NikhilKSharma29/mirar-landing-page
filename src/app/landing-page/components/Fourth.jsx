@@ -96,7 +96,7 @@ const Fourth = () => {
   }, [isMobile]);
 
   const StepCard = ({ step }) => (
-    <div id='solution' className="flex flex-col items-center h-full md:h-[55vw] lg:h-[45vw] xl:h-[35vw]  px-4">
+    <div id='solution' className="flex flex-col items-center h-full  px-4">
       <div className="w-32 h-32 md:w-36 md:h-36 flex items-center justify-center rounded-full bg-[#F2F2F2] mx-auto">
         {step.icon}
       </div>
@@ -190,7 +190,7 @@ const Fourth = () => {
       )}
 
       {/* CTA */}
-      <div className="mt-12 md:mt-16">
+      <div className="mt-8 md:mt-12">
         <Btn onClick={() => openModal()} />
       </div>
     </section>
