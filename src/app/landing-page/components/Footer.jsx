@@ -29,9 +29,8 @@ const Footer = () => {
           <div className="flex gap-5 text-lg">
             <a onClick={() => window.open("https://www.facebook.com/mirariai/", "_blank")} className="hover:text-white transition-colors cursor-pointer"><FaFacebookF /></a>
             <a onClick={()=> window.open("https://www.instagram.com/mirar.aii", "_blank")} className="hover:text-white transition-colors cursor-pointer"><FaInstagram /></a>
-            <a href="#" className="hover:text-white transition-colors cursor-pointer"><FaXTwitter /></a>
-            <a href="#" className="hover:text-white transition-colors cursor-pointer"><FaLinkedinIn /></a>
-            <a href="#" className="hover:text-white transition-colors cursor-pointer"><FaYoutube /></a>
+            <a onClick={()=> window.open("https://www.linkedin.com/company/mirar-ai/?viewAsMember=true", "_blank")} className="hover:text-white transition-colors cursor-pointer"><FaLinkedinIn /></a>
+            <a onClick={()=> window.open("https://www.youtube.com/@Mirarai-123", "_blank")} className="hover:text-white transition-colors cursor-pointer"><FaYoutube /></a>
           </div>
         </div>
 

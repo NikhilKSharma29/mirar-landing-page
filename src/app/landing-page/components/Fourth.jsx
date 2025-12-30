@@ -14,7 +14,7 @@ const steps = [
     id: 2,
     icon: <Share size={48} className="text-blue-500" />,
     title: 'Step 2 — Connect Your Socials & POS',
-    description: 'Connect Instagram, Facebook, WhatsApp, and your POS. Mirar plugs straight into thetools you already use.'
+    description: 'Connect Instagram, Facebook, WhatsApp, and your POS. Mirar plugs straight into the tools you already use.'
   },
   // {
   //   id: 3,
@@ -26,7 +26,7 @@ const steps = [
     id: 3,
     icon: <ShoppingCart size={48} className="text-blue-500" />,
     title: 'Step 3 —  Start Taking Orders via DMs',
-    description: 'Customers message you like they already do. Mirar handles menus, questions,payment, pickup or delivery ? andsends orders straight to your POS.'
+    description: 'Customers message you like they already do. Mirar handles menus, questions, payment, pickup or delivery, and sends orders straight to your POS.'
   },
   // {
   //   id: 5,
@@ -113,14 +113,11 @@ const Fourth = () => {
     <section className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 text-center bg-white">
       {/* Title */}
       <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-4 text-black max-w-4xl mx-auto">
-        Getting Started with Mirar AI
-        No fees. No setup hassle.
-        Start taking orders from your DMs today.
+        Start Taking Orders Directly From Your DMs, <br/> No Fees. No Setup.
 
       </h2>
       <p className="text-gray-600 max-w-2xl mx-auto mb-12 md:mb-16 text-black">
-        No coding. No complicated setup. Mirar AI is built so any restaurant can
-        start taking AI-powered orders the same day.
+        Mirar AI connects Instagram, WhatsApp, and Messenger straight to your POS,  turning everyday messages into paid orders instantly with zero commissions.
       </p>
 
       {/* Steps Container */}
