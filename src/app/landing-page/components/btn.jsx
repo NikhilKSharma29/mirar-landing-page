@@ -6,7 +6,7 @@ const Btn = () => {
   
 
   const handleClick = () => {
-  window.open("https://restaurant.mirar.ai", "_blank", "noopener=yes,noreferrer=yes");
+  window.open("https://restaurant.mirar.ai/auth/SignUp", "_blank", "noopener=yes,noreferrer=yes");
 };
   return (
     <button  onClick={handleClick}  className="
