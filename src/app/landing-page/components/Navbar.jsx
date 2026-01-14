@@ -25,6 +25,7 @@ export default function Navbar() {
     { label: "Home", href: "#hero" },
     { label: "Solution", href: "#solution" },
     { label: "Benefits", href: "#benefits" },
+    { label: "How it Works", href: "#howitworks" },
     // { label: "Pricing", href: "#pricing" },
   ];
 

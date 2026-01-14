@@ -3,6 +3,7 @@ import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn, FaYoutube } from "r
 import { useModal } from './ModalContext';
 import Image from 'next/image';
 import Link from 'next/link';
+import { CopyrightIcon } from 'lucide-react';
 
 const Footer = () => {
    const { openModal } = useModal();
@@ -39,7 +40,7 @@ const Footer = () => {
 
         {/* Bottom Section - Column on mobile, row on desktop */}
         <div className="flex flex-col-reverse md:flex-row justify-center gap-4 items-center text-xs text-gray-400 space-y-4 md:space-y-0">
-          <p className="text-center md:text-right"> 2025 Mirar AI. All rights reserved.</p>
+          <p className="text-center md:text-right flex items-center"><CopyrightIcon className="w-3 h-3" />&nbsp; 2025 Mirar AI. All rights reserved.</p>
           {/* Policy Links - Column on mobile, row on desktop */}
           <div className="flex flex-col items-center space-y-2 sm:flex-row sm:space-y-0 sm:space-x-6 ">
             <Link href="/privacy-policy" className="hover:text-white transition-colors block underline cursor-pointer">Privacy Policy</Link>

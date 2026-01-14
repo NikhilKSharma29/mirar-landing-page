@@ -7,45 +7,45 @@ const contentSections = [
   {
     id: 1,
     number: '01',
-    title: 'Orders That Never Slip Away',
-    description: 'Mirar AI replies instantly with your menu options, special offers, recommendations based on customer preference, and it does so in a tone that is personalised to your brand.',
-    image: '/images/girl.gif'
+    title: 'Your Social Channels',
+    description: `Connect Instagram, WhatsApp, and Messenger. No new apps. No new systems. Just the channels you already use.`,
+    image: '/gifs/social.gif',
   },
   {
     id: 2,
     number: '02',
-    title: 'Get Paid Instantly',
-    description: 'No commissions. No middlemen. Secure payments go directly to you, all inside the same chat.',
-    image: '/images/sec.gif'
+    title: 'Customers Order via DMs ',
+    description: 'Customers message you. Mirar’s AI shows your menu, answers questions, and takes the order automatically – right inside the chat ',
+    image: '/gifs/customerOrder.gif',
   },
   {
     id: 3,
     number: '03',
-    title: 'Delivery, Done For You',
-    description: 'AI auto-books your preferred delivery partner.  Customers track and pay in the same chat thread, no extra steps.',
-    image: '/images/three.gif'
-  },
-  {
-    id: 4,
-    number: '04',
-    title: 'Complaints Resolved in Seconds',
-    description: 'Cold food? Wrong order? AI handles it right away, keeping customers happy and loyal.',
-    image: '/images/four.gif'
-  },
-  {
-    id: 5,
-    number: '05',
-    title: 'Turn Every Order Into 5 Stars',
-    description: 'After delivery, AI sends a Google review link. More 5-star ratings = higher visibility = more customers.',
-    image: '/images/five.gif'
-  },
-  {
-    id: 6,
-    number: '06',
-    title: 'Bring Customers Back Automatically',
-    description: 'Your Agentic AI CRM remembers every customer. It sends reorder reminders, promos, and loyalty rewards — without you lifting a finger.',
-    image: '/images/six.gif'
+    title: 'Orders Go Straight to Your POS ',
+    description: 'Every order from all your social channels flows directly into your POS – instantly and automatically. ',
+    image: '/gifs/POS.gif'
   }
+  // {
+  //   id: 4,
+  //   number: '04',
+  //   title: 'Complaints Resolved in Seconds',
+  //   description: 'Cold food? Wrong order? AI handles it right away, keeping customers happy and loyal.',
+  //   image: '/images/four.gif'
+  // }
+  // {
+  //   id: 5,
+  //   number: '05',
+  //   title: 'Turn Every Order Into 5 Stars',
+  //   description: 'After delivery, AI sends a Google review link. More 5-star ratings = higher visibility = more customers.',
+  //   image: '/images/five.gif'
+  // },
+  // {
+  //   id: 6,
+  //   number: '06',
+  //   title: 'Bring Customers Back Automatically',
+  //   description: 'Your Agentic AI CRM remembers every customer. It sends reorder reminders, promos, and loyalty rewards — without you lifting a finger.',
+  //   image: '/images/six.gif'
+  // }
 ];
 
 const Third = () => {
@@ -68,18 +68,13 @@ const Third = () => {
       <div className='max-w-7xl mx-auto'>
         {/* Heading Section */}
         <div className='text-center space-y-4 md:space-y-6 mb-12 md:mb-20'>
-          <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium px-2 sm:px-4 md:px-8 lg:px-16 xl:px-24 text-black'>
+          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal  px-2 sm:px-4 md:px-8 lg:px-16 xl:px-24 text-black'>
             Meet Your Customers
             Where They Already
             Are.
           </h1>
           <p className='text-base sm:text-lg md:text-xl text-black px-2 sm:px-4 md:px-12 lg:px-24 xl:px-32'>
-            Billions of people use WhatsApp,
-            Messenger and Instagram every
-            month. Mirar lets you turn those
-            conversations into direct,
-            commission-free orders that flow
-            straight to your POS.
+            Billions of people use WhatsApp, Messenger and Instagram every<br className='hidden md:block'/> month. Mirar lets you turn those conversations into direct,<br className='hidden md:block'/> commission-free orders that flow straight to your POS.
           </p>
         </div>
 
@@ -110,7 +105,7 @@ const Third = () => {
             {contentSections.map((section) => (
               <div
                 key={section.id}
-                className='w-full flex-shrink-0 px-4'
+                className='w-full flex-shrink-0 sm:px-4 '
               >
                 <div className='flex flex-col-reverse md:flex-row items-center justify-center gap-8 w-full max-w-5xl mx-auto'>
                   <div className='w-full md:w-1/2 space-y-6 text-center mt-8 md:mt-0'>
@@ -123,6 +118,9 @@ const Third = () => {
                     <p className='text-base sm:text-lg md:text-xl text-black'>
                       {section.description}
                     </p>
+                    <div className='pt-8 text-center'>
+                      <Btn />
+                    </div>
                   </div>
                   <div className='w-full md:w-1/2 flex justify-center'>
                     <Image
@@ -139,9 +137,7 @@ const Third = () => {
           </div>
         </div>
 
-        <div className='pt-8 text-center'>
-          <Btn />
-        </div>
+
       </div>
     </div>
   );

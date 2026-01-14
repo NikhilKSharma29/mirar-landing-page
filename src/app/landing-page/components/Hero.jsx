@@ -38,17 +38,16 @@ const Hero = () => {
           <div className="w-full lg:w-[70%] lg:pr-12 xl:pr-20 text-center lg:text-left md:mt-0">
             <div className="max-w-3xl mx-auto lg:mx-0 text-center -mt-32 md:mt-0 lg:mt-0">
               <h1 className="text-3xl text-4xl sm:text-5xl lg:text-5xl text-white">
-                Restaurants & Cafés
-                <br />
-                Stop Paying Up to 30% to Uber Eats & DoorDash
-                <br />
-
-                Turn your WhatsApp, Instagram, and Messenger
-                into your own ordering channel.
+                
+                Stop Paying Up to 30% to Uber Eats
+                <br className='hidden md:block'/> & DoorDash Turn your
+                <br className='hidden md:block'/> WhatsApp, Instagram, and
+                <br className='hidden md:block'/> Messenger into your own
+                <br className='hidden md:block'/> ordering channel.
               </h1>
               <p className="text-white mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed px-12">
                 Take orders directly from DMs, that flow straight
-                into your POS.
+                into your <br className='hidden md:block'/> POS.
                 No apps. No website. No friction.
 
               </p>

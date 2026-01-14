@@ -9,6 +9,9 @@ import Fifth from './landing-page/components/Fifth'
 import Sixth from './landing-page/components/sixth'
 import Seventh from './landing-page/components/seventh'
 import Footer from './landing-page/components/Footer'
+import RestaurantsBar from './landing-page/components/RestaurantsBar'
+import SocialMediaHero from './landing-page/components/SocialMediaHero'
+import Chatpage from './landing-page/components/Chatpage'
 const page = () => {
     
     return (
@@ -18,8 +21,12 @@ const page = () => {
             <Navbar />
             {/* hero */}
             <Hero />
+
+            <RestaurantsBar/>
+
+            <SocialMediaHero/>
             {/* second section */}
-            <Second />
+            {/* <Second /> */}
 
 
             {/* third section */}
@@ -29,8 +36,8 @@ const page = () => {
             <Fourth />
 
             { /* fifth section */}
-            <Fifth />
-
+            {/* <Fifth /> */}
+           <Chatpage/>
             { /* sixth section */}
             {/* <Sixth /> */}
 
