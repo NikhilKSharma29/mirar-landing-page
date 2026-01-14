@@ -20,7 +20,7 @@ const RestaurantsBar = () => {
     {
       id: 3,
       name: 'BabyCake',
-      logo: '/restaurantsBar/babyCake.png',
+      logo: '/restaurantsBar/babycake.png',
       alt: 'BabyCake logo'
     },
     {
